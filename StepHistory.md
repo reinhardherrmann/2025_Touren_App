@@ -34,4 +34,5 @@ Sources: none
 - update Database connection
 - Add App - Logos
 - updated Welcome.blade with new text and new App-Logo
+- updated App-Logo for Login, Register and Sidebar Blade files
 ---
