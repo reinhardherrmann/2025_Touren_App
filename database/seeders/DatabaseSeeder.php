@@ -17,6 +17,13 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::create([
+            'name' => 'REWE Admin',
+            'email' => 'admin@a.de',
+            'password' => Hash::make('password'),
+            'email_verified_at' => now(),
+        ]);
+
+        User::create([
             'name' => 'Reinhard Herrmann',
             'email' => 'a@a.de',
             'password' => Hash::make('password'),
