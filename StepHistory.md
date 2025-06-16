@@ -24,7 +24,11 @@ helper: 0001_01_01_000000
 
 
 
-
+## Step 03 Fill Seeders with data
+Sources: none
+- 
+- created Mode. Migration, Factory and Seeder for TripTypes
+---
 ## Step 02 Create Models, Migrations and Seeders for all tables
 Sources: none
 - create migrations:

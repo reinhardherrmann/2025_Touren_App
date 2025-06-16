@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('trip_id')->constrained('trips')->cascadeOnDelete();
             $table->foreignId('store_id')->constrained('stores');
+            $table->date('date');
             $table->dateTime('arrival_time')->nullable();
             $table->dateTime('departure_time')->nullable();
             $table->integer('order_number')->default(1);

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('country')->default('Deutschland');
             $table->string('phone')->nullable();
             $table->string('image')->nullable();
+            $table->text('remark')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

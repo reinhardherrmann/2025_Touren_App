@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Stopp extends Model
+class TripType extends Model
 {
-    /** @use HasFactory<\Database\Factories\StoppFactory> */
+    /** @use HasFactory<\Database\Factories\TripTypeFactory> */
     use HasFactory;
+    protected $fillable = ['name','description','remark'];
 
-    protected $fillable = ['trip_id', 'store_id','date', 'arrival_time', 'departure_time', 'order_number'];
-
-    public function trip(): BelongsTo
+    public function trip():BelongsTo
     {
         return $this->belongsTo(Trip::class);
     }

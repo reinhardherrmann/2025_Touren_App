@@ -17,6 +17,9 @@ return new class extends Migration
             $table->foreignId('start_stock_id')->nullable()->constrained('stocks');
             $table->foreignId('target_stock_id')->nullable()->constrained('stocks');
             $table->foreignId('truck_id')->nullable()->constrained('trucks');
+            $table->foreignId('trip_type_id')->nullable()->references('id')->on('trip_types');
+            $table->foreignId('status_id')->nullable()->constrained('statuses');
+
             $table->string('trip_number');
             $table->date('date');
             $table->date('plan_date')->nullable();

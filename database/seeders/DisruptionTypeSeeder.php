@@ -51,7 +51,7 @@ class DisruptionTypeSeeder extends Seeder
         DisruptionType::create([
             'id' => 8,
             'name' => 'Sonstige',
-            'description' =>'ander Gründe für Verzögerung'
+            'description' =>'anderer Grund für Verzögerung'
         ]);
         DisruptionType::create([
             'id' => 9,

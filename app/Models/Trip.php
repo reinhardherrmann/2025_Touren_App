@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Trip extends Model
 {
@@ -15,7 +16,7 @@ class Trip extends Model
     protected $fillable = [
         'user_id','start_stock_id','target_stock_id','truck_id','trip_number','date','plan_date',
         'duration','depot_vt','depot_nt','start','end','plan_distance','distance_driven','start_km',
-        'end_km','status'
+        'end_km','status', 'trip_type_id', 'remark'
     ];
 
     public function user(): BelongsTo
@@ -31,5 +32,10 @@ class Trip extends Model
     public function stopps():HasMany
     {
         return $this->hasMany(Stopp::class);
+    }
+
+    public function tripType(): HasOne
+    {
+        return $this->hasOne(TripType::class);
     }
 }

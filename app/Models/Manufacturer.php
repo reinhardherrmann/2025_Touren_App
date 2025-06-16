@@ -9,5 +9,5 @@ class Manufacturer extends Model
 {
     /** @use HasFactory<\Database\Factories\ManufacturerFactory> */
     use HasFactory;
-    protected $fillable = ['name','description','image'];
+    protected $fillable = ['name','description','image','remark'];
 }
