@@ -1,8 +1,10 @@
 <div>
     <flux:modal.trigger name="create-address">
-        <flux:button>Neue Adresse </flux:button>
-    </flux:modal.trigger>
+        <!--<flux:button>Neue Adresse </flux:button>-->
+        <button class="dsy-btn dsy-btn-success">Neue Adresse</button>
 
+    </flux:modal.trigger>
+    <button class="dsy-btn dsy-btn-warning text-white">Warning</button>
     <livewire:addresses.create />
 
     <div class="mt-4 overflow-x-auto">

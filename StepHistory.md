@@ -22,7 +22,11 @@ helper: 0001_01_01_000000
 
 
 
-
+## Step 05 Install DaisyUI
+Sources: https://daisyui.com/docs/install/laravel/
+- install Framework
+- 
+---
 ## Step 04 Create Pages for Addresses
 Sources: https://www.youtube.com/watch?v=uWU6QOsQM_w&t=382s
 - create addresses.blade to show all pages wanted
