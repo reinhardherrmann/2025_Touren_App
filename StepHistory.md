@@ -18,7 +18,11 @@ helper: 0001_01_01_000000
 
 
 
-
+## Step 08 Create Component ViewAddress
+Sources: none
+- create component
+- activated button in view index to navigate to addresses.view
+---
 ## Step 07 Make Addresses.index searchable 
 Sources: https://livewire.laravel.com/screencast/data-tables/searching
 - make Addresses searchable for
