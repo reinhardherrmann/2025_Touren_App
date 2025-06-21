@@ -2,18 +2,28 @@
     <div class="flex">
         <flux:modal.trigger name="create-address">
             <!--<flux:button>Neue Adresse </flux:button> -->
-            <button class="btn btn-success text-white">Neue Adresse </button>
+            <button class="btn btn-success rounded-full text-white">Neue Adresse </button>
 
 
         </flux:modal.trigger>
 
         <!-- Seach Field -->
-                <input type="text" class="input join-item ms-3" placeholder="Nach Adresse suchen" />
-                <button class="btn join-item">
+        <div class="join">
+            <div>
+                <label class="input validator join-item rounded-l-full ms-3">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 18L18 6M6 6L18 18" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033Z" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                </button>
+                    <input class="rounded-s-2xl" type="text" placeholder="Nach Adresse suchen" />
+                </label>
+            </div>
+            <button class="btn btn-neutral join-item text-white rounded-r-full">
+                <svg class="text-white" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 18L18 6M6 6L18 18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
     </div>
 
 
