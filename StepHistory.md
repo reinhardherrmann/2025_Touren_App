@@ -20,8 +20,16 @@ helper: 0001_01_01_000000
 
 
 
-
-
+## Step main Bugfixes for Daisy Ui and addresse.index
+Sources: none
+- added Sechrfield and Button to index.blade
+- 
+---
+## Step 06 Bring Create Address to life
+Sources: none
+- change flux inputs to daisyui
+- add validation
+---
 ## Step 05 Install DaisyUI
 Sources: https://daisyui.com/docs/install/laravel/
 - install Framework

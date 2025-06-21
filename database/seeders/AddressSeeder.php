@@ -118,7 +118,7 @@ class AddressSeeder extends Seeder
         ADDRESS::create(['id' => 103, 'street' => 'Volkradstr. 32', 'postal_code' => '10319', 'city' => 'Berlin', 'district' => 'Friedrichsfelde', 'remark' => 'automatisch erzeugt']);
         ADDRESS::create(['id' => 104, 'street' => 'Emmentaler Str. 122', 'postal_code' => '13409', 'city' => 'Berlin', 'district' => 'Reinickendorf', 'remark' => 'automatisch erzeugt']);
         ADDRESS::create(['id' => 105, 'street' => 'Otto-Suhr-Allee 80', 'postal_code' => '10585', 'city' => 'Berlin', 'district' => 'Charlottenburg', 'remark' => 'automatisch erzeugt']);
-        ADDRESS::create(['id' => 106, 'street' => 'Thrustr. 60', 'postal_code' => '10551', 'city' => 'Bolin', 'district' => 'Tiergarten', 'remark' => 'automatisch erzeugt']);
+        ADDRESS::create(['id' => 106, 'street' => 'Turmstr. 60', 'postal_code' => '10551', 'city' => 'Berlin', 'district' => 'Tiergarten', 'remark' => 'automatisch erzeugt']);
         ADDRESS::create(['id' => 107, 'street' => 'Malteserstr. 128', 'postal_code' => '12249', 'city' => 'Lankwitz', 'district' => 'NULL', 'remark' => 'automatisch erzeugt']);
         ADDRESS::create(['id' => 108, 'street' => 'Schnellerstr. 74', 'postal_code' => '12439', 'city' => 'Berlin', 'district' => 'Niederschöneweide', 'remark' => 'automatisch erzeugt']);
         ADDRESS::create(['id' => 109, 'street' => 'Alte Potsdamer Str. 1', 'postal_code' => '10785', 'city' => 'Berlin', 'district' => 'Mitte', 'remark' => 'automatisch erzeugt']);
@@ -156,7 +156,7 @@ class AddressSeeder extends Seeder
         ADDRESS::create(['id' => 141, 'street' => 'Auerbacher Str. 12', 'postal_code' => '14193', 'city' => 'Berlin', 'district' => 'Grunewald', 'remark' => 'automatisch erzeugt']);
         ADDRESS::create(['id' => 142, 'street' => 'Dolgenseestr 8', 'postal_code' => '10319', 'city' => 'Berlin ', 'district' => 'Fridrichsfelde', 'remark' => 'automatisch erzeugt']);
         ADDRESS::create(['id' => 143, 'street' => 'Alt-Rudow 64', 'postal_code' => '12355', 'city' => 'Berlin', 'district' => 'Rudow', 'remark' => 'automatisch erzeugt']);
-        ADDRESS::create(['id' => 144, 'street' => 'gotlindestr 4Da', 'postal_code' => '10365', 'city' => 'Bolin', 'district' => 'Lichtenberg', 'remark' => 'automatisch erzeugt']);
+        ADDRESS::create(['id' => 144, 'street' => 'Gotlindestr 4Da', 'postal_code' => '10365', 'city' => 'Berlin', 'district' => 'Lichtenberg', 'remark' => 'automatisch erzeugt']);
         ADDRESS::create(['id' => 145, 'street' => 'Thiemannstr 9', 'postal_code' => '12053', 'city' => 'Berlin ', 'district' => 'Neukölln', 'remark' => 'automatisch erzeugt']);
         ADDRESS::create(['id' => 146, 'street' => 'Eldenaer Str. 42', 'postal_code' => '10247', 'city' => 'Berlin', 'district' => 'Friedrichshain', 'remark' => 'automatisch erzeugt']);
         ADDRESS::create(['id' => 147, 'street' => 'Eldenaer Str 43', 'postal_code' => '10247', 'city' => 'Berlin', 'district' => 'Friedrichshain', 'remark' => 'automatisch erzeugt']);

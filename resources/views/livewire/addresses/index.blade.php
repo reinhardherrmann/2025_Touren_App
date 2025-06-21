@@ -1,10 +1,22 @@
 <div>
-    <flux:modal.trigger name="create-address">
-        <!--<flux:button>Neue Adresse </flux:button>-->
-        <button class="dsy-btn dsy-btn-success">Neue Adresse</button>
+    <div class="flex">
+        <flux:modal.trigger name="create-address">
+            <!--<flux:button>Neue Adresse </flux:button> -->
+            <button class="btn btn-success text-white">Neue Adresse </button>
 
-    </flux:modal.trigger>
-    <button class="dsy-btn dsy-btn-warning text-white">Warning</button>
+
+        </flux:modal.trigger>
+
+        <!-- Seach Field -->
+                <input type="text" class="input join-item ms-3" placeholder="Nach Adresse suchen" />
+                <button class="btn join-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 18L18 6M6 6L18 18" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+    </div>
+
+
     <livewire:addresses.create />
 
     <div class="mt-4 overflow-x-auto">
