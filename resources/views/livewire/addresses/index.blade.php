@@ -14,11 +14,12 @@
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033Z" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <input class="rounded-s-2xl" type="text" placeholder="Nach Adresse suchen" />
+                    <input wire:model.live.debounce.500ms="search" class="rounded-s-2xl" type="text" placeholder="Nach Adresse suchen" />
                 </label>
             </div>
-            <button class="btn btn-neutral join-item text-white rounded-r-full">
-                <svg class="text-white" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button wire:click.prevent="resetSearch" title="Suche leeren"
+                class="btn btn-neutral join-item text-white  rounded-r-full">
+                <svg class="text-white ms-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 18L18 6M6 6L18 18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
@@ -53,7 +54,8 @@
 
             <tbody class="whitespace-nowrap">
             @foreach($addresses as $address)
-                <tr class="even:bg-blue-50 hover:bg-blue-100">
+                <tr wire:key="{{ $address->id }}"
+                    class="even:bg-blue-50 hover:bg-blue-100">
                     <td class="p-4 text-[15px] text-slate-900 font-medium">
                         {{ $address->street }}
                     </td>
@@ -68,7 +70,14 @@
                     </td>
                     <td class="p-4">
                         <div class="flex items-center">
-                            <button class="mr-3 cursor-pointer" title="Edit">
+                            <button class="mr-3 cursor-pointer" title="Ansehen">
+                                <svg class="w-5 h-5 text-green-500 hover:text-green-700"
+                                     width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.03555 12.3224C1.96647 12.1151 1.9664 11.8907 2.03536 11.6834C3.42372 7.50972 7.36079 4.5 12.0008 4.5C16.6387 4.5 20.5742 7.50692 21.9643 11.6776C22.0334 11.8849 22.0335 12.1093 21.9645 12.3166C20.5761 16.4903 16.6391 19.5 11.9991 19.5C7.36119 19.5 3.42564 16.4931 2.03555 12.3224Z" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <button class="mr-3 cursor-pointer" title="Bearbeiten">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-blue-500 hover:fill-blue-700"
                                      viewBox="0 0 348.882 348.882">
                                     <path
@@ -79,7 +88,8 @@
                                         data-original="#000000" />
                                 </svg>
                             </button>
-                            <button title="Delete" class="cursor-pointer">
+                            <button wire:click.prevent="deleteAddress({{ $address->id }})"
+                                title="Löschen" class="cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-red-500 hover:fill-red-700" viewBox="0 0 24 24">
                                     <path
                                         d="M19 7a1 1 0 0 0-1 1v11.191A1.92 1.92 0 0 1 15.99 21H8.01A1.92 1.92 0 0 1 6 19.191V8a1 1 0 0 0-2 0v11.191A3.918 3.918 0 0 0 8.01 23h7.98A3.918 3.918 0 0 0 20 19.191V8a1 1 0 0 0-1-1Zm1-3h-4V2a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v2H4a1 1 0 0 0 0 2h16a1 1 0 0 0 0-2ZM10 4V3h4v1Z"

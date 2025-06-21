@@ -12,12 +12,39 @@ class Index extends Component
 
     public $pages = 5;
     public $search = '';
+
+    public function deleteAddress($id)
+    {
+        Address::destroy($id);
+        return redirect()->to('/addresses')->with('success', 'Addresse erfolgreich gelöscht.');
+    }
+    public function resetSearch()
+    {
+        $this->reset(['search']);
+    }
+    public function updatedSearch()
+    {
+        // to always select the first page and show results
+        $this->resetPage();
+    }
+    protected function applySearch($query)
+    {
+        return $this->search === ''
+            ? $query
+            : $query = Address::query()
+                ->where('street', 'like', '%' . $this->search . '%')
+                ->orWhere('postal_code', 'like', '%' . $this->search . '%')
+                ->orWhere('city', 'like', '%' . $this->search . '%')
+                ->orWhere('district', 'like', '%' . $this->search . '%')
+            ->paginate($this->pages);
+
+    }
     public function render()
     {
-        $query = Address::query()
-        ->select(['id', 'street', 'postal_code', 'city', 'district', 'remark'])
-        ->paginate($this->pages);
-        //dd($query);
+        $query = Address::paginate($this->pages);
+
+        $query = $this->applySearch($query);
+
         return view('livewire.addresses.index', [
             'addresses' => $query
         ]);

@@ -19,7 +19,14 @@ helper: 0001_01_01_000000
 
 
 
-
+## Step 07 Make Addresses.index searchable 
+Sources: https://livewire.laravel.com/screencast/data-tables/searching
+- make Addresses searchable for
+  - streets, postal codes, cities or district
+- Added Key to every table row
+- bring Button Delete to live
+- integrated Flash messages in app.blade.php
+---
 ## Step main Bugfixes for Daisy Ui and addresse.index
 Sources: none
 - added Sechrfield and Button to index.blade
