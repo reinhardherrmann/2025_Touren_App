@@ -16,7 +16,11 @@ helper: 0001_01_01_000000
 
 
 
-
+## Step main Bugfix
+Sources: none
+- change appearance of flash messages on Page
+- 
+---
 ## Step 09 Create Component to Edit Address
 Sources: none
 - create Component

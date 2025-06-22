@@ -31,7 +31,7 @@
             <!-- Anzahl der angezeigten Datensätze -->
 
 
-                <select wire:model="perPage" wire:change="resetPagination" class="select w-28 rounded-full ms-3">
+                <select wire:model="perPage" wire:change="resetPagination" class="select w-32 rounded-full ms-3">
                     <option value="5">5 pro Seite</option>
                     <option value="10" >10 pro Seite</option>
                     <option value="20" >20 pro Seite</option>
