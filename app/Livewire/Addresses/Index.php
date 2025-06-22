@@ -10,8 +10,15 @@ class Index extends Component
 {
     use WithPagination;
 
-    public $pages = 5;
+    public $perPage = 10;
     public $search = '';
+
+
+    public function resetPagination()
+    {
+        $this->resetExcept(['search','perPage']);;
+    }
+
 
     public function deleteAddress($id)
     {
@@ -36,12 +43,12 @@ class Index extends Component
                 ->orWhere('postal_code', 'like', '%' . $this->search . '%')
                 ->orWhere('city', 'like', '%' . $this->search . '%')
                 ->orWhere('district', 'like', '%' . $this->search . '%')
-            ->paginate($this->pages);
+            ->paginate($this->perPage);
 
     }
     public function render()
     {
-        $query = Address::paginate($this->pages);
+        $query = Address::paginate($this->perPage);
 
         $query = $this->applySearch($query);
 

@@ -17,7 +17,13 @@ helper: 0001_01_01_000000
 
 
 
-
+## Step 09 Create Component to Edit Address
+Sources: none
+- create Component
+- added functions to change Address or to leave without changes.
+- added margin top to pagination on index.blade
+- added select to modify addresses per page 
+---
 ## Step 08 Create Component ViewAddress
 Sources: none
 - create component

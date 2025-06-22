@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Addresses\Edit;
 use App\Livewire\Addresses\ViewAddress;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
@@ -27,6 +28,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/password', Password::class)->name('settings.password');
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
     Route::get('/address/{id}/view', ViewAddress::class)->name('address.view');
+    Route::get('/address/{id}/edit', Edit::class)->name('address.edit');
 
 });
 
