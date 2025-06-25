@@ -3,6 +3,7 @@
 namespace App\Livewire\Addresses;
 
 use App\Models\Address;
+use Flux\Flux;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -12,11 +13,18 @@ class Index extends Component
 
     public $perPage = 10;
     public $search = '';
+    public $idToDelete;
 
+    public function showDeleteConfirm($id)
+    {
+        $this->idToDelete = $id;
+        Flux::modal('delete-address')->show();
+
+    }
 
     public function resetPagination()
     {
-        $this->resetExcept(['search','perPage']);;
+        $this->resetExcept(['search', 'perPage']);;
     }
 
 
@@ -25,15 +33,18 @@ class Index extends Component
         Address::destroy($id);
         return redirect()->to('/addresses')->with('success', 'Addresse erfolgreich gelöscht.');
     }
+
     public function resetSearch()
     {
         $this->reset(['search']);
     }
+
     public function updatedSearch()
     {
         // to always select the first page and show results
         $this->resetPage();
     }
+
     protected function applySearch($query)
     {
         return $this->search === ''
@@ -43,9 +54,10 @@ class Index extends Component
                 ->orWhere('postal_code', 'like', '%' . $this->search . '%')
                 ->orWhere('city', 'like', '%' . $this->search . '%')
                 ->orWhere('district', 'like', '%' . $this->search . '%')
-            ->paginate($this->perPage);
+                ->paginate($this->perPage);
 
     }
+
     public function render()
     {
         $query = Address::paginate($this->perPage);

@@ -1,4 +1,4 @@
-<x-layouts.app :title="__('Dashboard')">
+<x-layouts.app :title="__('Adressen')">
 
     <div>
         <flux:heading size="xl" level="1">{{ __('Adressen') }}</flux:heading>

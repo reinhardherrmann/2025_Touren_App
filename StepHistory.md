@@ -15,7 +15,11 @@ helper: 0001_01_01_000000
 
 
 
-
+## Step 10 Add ConfirmationDialog for Deleting Addresses
+Sources: none
+- create Dialog with cancel and deletion.
+- added TODO to make Flash messages disappear
+---
 ## Step main Bugfix
 Sources: none
 - change appearance of flash messages on Page
